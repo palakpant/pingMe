@@ -23,6 +23,7 @@ public class RoomController {
     //create room
 
     @PostMapping
+    @CrossOrigin(origins = "http://localhost:3000")
     public ResponseEntity<?> createRoom(@RequestBody String roomId) {
         // Logic to create a room
         Room roomCreated = roomService.createRoom(roomId);
