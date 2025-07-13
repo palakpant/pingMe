@@ -11,7 +11,6 @@ import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
 
 import java.time.LocalDateTime;
 
@@ -27,8 +26,8 @@ public class ChatController {
     // Additional methods for handling chat-related requests can be added here
     // For example, methods to send messages, get rooms, etc.
 
-    @MessageMapping("/sendMessage/{roomId")
-    @SendTo("/topic/room/{roomId}")
+    @MessageMapping("/sendMessage/{roomId") //client to server
+    @SendTo("/topic/room/{roomId}") //server to client 
     public Message sendMessage(
             @DestinationVariable String roomId,
             @RequestBody MessageRequest request) throws Exception {
