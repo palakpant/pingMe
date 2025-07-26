@@ -1,10 +1,15 @@
 import React from 'react'
+import speakIcon from '../assets/speak.png'
 
 const JoinCreateChat = () => {
   return (
     
     <div className="min-h-screen flex items-center justify-center">
       <div className='p-10 dark:border-gray-700 w-full flex flex-col gap-5 max-w-md rounded dark:bg-gray-900 shadow'>
+
+        <div>
+          <img src={speakIcon} alt="Logo" className="w-24 h-24 mx-auto mb-4" />
+        </div>
     <h1 className="text-2xl font-semibold text-center">Join or Create a Chat</h1>
     
     {/* name of user */}
